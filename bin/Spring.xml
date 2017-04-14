@@ -3,11 +3,23 @@
 
 <beans>
 	<bean id="triangle" class="com.example.Triangle">
+		<property name="pointA" ref="zeroPoint"/>
+		<property name="pointB" ref="Point01"/>
+		<property name="pointC" ref="Point02"/>
+	</bean>
+	<bean id="zeroPoint" class="com.example.Point">
+		<property name="x" value="0"/>
+		<property name="y" value="0"/>
+	</bean>
 	
-	<constructor-arg index="0" value="prostokątny"/>
-	<constructor-arg index="1" type="int" value="20"/>
-	<property name="type" value="rownoramienny"/>
+	<bean id="Point01" class="com.example.Point">
+		<property name="x" value="-20"/>
+		<property name="y" value="0"/>
+	</bean>
 	
+	<bean id="Point02" class="com.example.Point">
+		<property name="x" value="20"/>
+		<property name="y" value="0"/>
 	</bean>
 	
 </beans>
